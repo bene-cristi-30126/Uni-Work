@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1638205663 source:c:\users\benec\onedrive\desktop\dispersie_englezeasca\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+

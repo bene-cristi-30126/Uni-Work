@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1633796189 source:c:\users\benec\onedrive\documents\info c\sample_liste\main.c
+	<stdio.h>
+	<stdlib.h>
+

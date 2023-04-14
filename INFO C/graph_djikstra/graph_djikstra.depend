@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1637530533 source:c:\users\benec\onedrive\documents\info c\graph_djikstra\main.c
+	<stdio.h>
+	<stdlib.h>
+

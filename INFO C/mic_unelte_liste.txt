@@ -1,0 +1,86 @@
+NOD *CautaNod(LISTA *l, char *nume, float pret)
+{
+    NOD *p = (NOD *)malloc(sizeof(NOD));
+    p = NULL;
+    l->crt = l->prim;
+
+    while (l->crt)
+    {
+        if (strcmp(l->crt->date_utile->nume, nume) == 0 && l->crt->date_utile->pret == pret)
+        {
+            p = l->crt;
+            break;
+        }
+        else
+        {
+            l->crt = l->crt->urm;
+        }
+    }
+
+    return p;
+}
+
+void StergeNod(LISTA *l, NOD *p)
+{
+    if ((l->prim == p) && (l->ultim == p))
+    {
+        l->prim = l->ultim = 0;
+        free(p);
+    }
+    else
+    {
+        if (p == l->prim)
+        {
+            l->prim = l->prim->urm;
+            l->prim->prec = 0;
+            free(p);
+        }
+        else
+        {
+            if (p == l->ultim)
+            {
+                l->ultim = l->ultim->prec;
+                l->ultim->urm = 0;
+                free(p);
+            }
+            else
+            {
+                p->prec->urm = p->urm;
+                p->urm->prec = p->prec;
+                free(p);
+            }
+        }
+    }
+}
+
+void Actualizeaza(LISTA *l, NOD *p, int cantitate, char *data_primirii, char *data_expirarii)
+{
+    l->crt = p;
+    char *buf = (char *)malloc((strlen(data_expirarii) + 2) * sizeof(char));
+    strcpy(buf, data_expirarii);
+    strcat(buf, "\n");
+    l->crt->date_utile->cantitate = cantitate;
+    strcpy(l->crt->date_utile->data_primirii, data_primirii);
+    strcpy(l->crt->date_utile->data_expirarii, buf);
+}
+
+void Salveaza(LISTA *l)
+{
+    FILE *f = fopen("output.txt", "w");
+
+    l->crt = l->prim;
+    while (l->crt)
+    {
+        fprintf(f, "%s %f %d %s %s",l->crt->date_utile->nume, l->crt->date_utile->pret,l->crt->date_utile->cantitate, l->crt->date_utile->data_primirii,l->crt->date_utile->data_expirarii);
+        l->crt = l->crt->urm;
+    }
+}
+
+
+calciu,10,10,21.23.2015,21.06.2100
+paracetamol,12,4,21.23.2016,31.06.2100
+calmant,72,14,21.20.2010,11.06.2100
+ibuprofen,17,64,21.23.2015,31.06.2100
+magneziu,27,4,21.23.2015,31.06.2100
+glicerina,47,4,21.12.2015,31.06.2100
+xanax,20,40,21.23.2005,31.06.2100

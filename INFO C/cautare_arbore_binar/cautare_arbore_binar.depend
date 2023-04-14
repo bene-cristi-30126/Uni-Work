@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1635930458 source:c:\users\benec\onedrive\documents\info c\cautare_arbore_binar\main.c
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

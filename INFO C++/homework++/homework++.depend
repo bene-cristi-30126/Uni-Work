@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1618485766 source:c:\users\benec\onedrive\documents\info c++\homework++\main.cpp
+	<iostream>
+	"homework++.h"
+
+1618485849 c:\users\benec\onedrive\documents\info c++\homework++\homework++.h
+	<iostream>
+

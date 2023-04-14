@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1638183869 source:c:\users\benec\onedrive\documents\info c\arbore_de_medicamente\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

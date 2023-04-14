@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1638918055 source:c:\users\benec\onedrive\documents\info c\supliment\main.c
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+

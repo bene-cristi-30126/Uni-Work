@@ -1,0 +1,12 @@
+car_CJ-05-SOL entered_at_1649586197208 
+car_CJ-04-SOL entered_at_1649586197222 
+car_CJ-05-SOL entered_at_1649586197208 
+car_CJ-07-SOL entered_at_1649586217095 
+car_CJ-04-SOL entered_at_1649586197222 
+car_CJ-05-SOL entered_at_1649586197208 
+car_CJ-06-SOL entered_at_1649586217098 
+car_CJ-07-SOL entered_at_1649586217095 
+car_CJ-09-SOL entered_at_1649586241874 
+car_CJ-09-SOL entered_at_1649591268762 
+car_CJ-09-SOL entered_at_1649591651209 
+car_CJ-09-SOL entered_at_1649591675564

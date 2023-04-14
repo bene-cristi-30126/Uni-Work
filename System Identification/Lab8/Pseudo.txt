@@ -1,0 +1,37 @@
+mse= 2.0876e-05
+
+b=0 f=0 Teta(:,1)=[b,;f]
+l=1 alfa=mic; l_max=ceva 100; delta mic;
+
+e=derivata_b=derivata_f=zeros(1,N)
+
+while
+	Gradi=0; Hessian=I2;
+	for k=2:N
+		e(k)=id.y(k)+f*id.y(k-1)-b*id.u(k-1)-f*e(k-1);
+        
+        	derivata_b(k)=-id.u(k-1) - f*derivata_b(k-1);
+        	derivata_f(k)= id.y(k-1) - f*derivata_f(k-1) - e(k-1);
+	end
+	
+	derivata_e=[derivata_b; derivata_f];
+		Gradienti=e.*derivata_e;
+		Gradi=(2/N)*(suma de Gradienti)
+
+		Hessieni=derivata_e*derivata_e';
+		Hessian=(2/N)*(suma de Hessieni);
+
+	Tetea(:,l+1)=Teta(:,l)-alfa*Hessian^-1*Gradi;
+	dif_Teta=Tetea(:,l+1)-Teta(:,l);
+	if norma(dif_Teta)<delta || l=l_max
+		break
+	else
+		b=Teta(1,l); f=Teta(2,l)
+		l=l+1;
+	end
+	end
+
+MSE=sum(e.^2)/N
+model=idpoly(1,[0 b],1,1,[1 f], id.Ts)
+figure, compare(model,val)
+		

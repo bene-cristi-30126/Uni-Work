@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1638183584 source:c:\users\benec\onedrive\documents\info c\tabel_dispersie\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

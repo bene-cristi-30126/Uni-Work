@@ -1,0 +1,6 @@
+1.Intro
+2.Explicare functie de aproximare
+3.Explicare cod
+4.Tunning(best m)
+5.Plots
+6.Concluzie

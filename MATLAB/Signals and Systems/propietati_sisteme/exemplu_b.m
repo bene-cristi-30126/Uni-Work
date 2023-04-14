@@ -1,0 +1,10 @@
+x=@(t)(-1*((t>=-1)&(t<0))+(1-t).*((t>=0)&(t<1))+(4-2*t).*((t>=1)&(t<2)));
+t=-3:0.01:4;
+y=abs(x(t)-x(t-1));
+subplot(2,1,1);
+plot(t,x(t));grid
+legend('x(t)');
+subplot(2,1,2);
+plot(t,y);grid
+legend('y(t)')
+plot(t,y);grid

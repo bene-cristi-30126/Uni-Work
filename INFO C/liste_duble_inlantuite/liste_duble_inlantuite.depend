@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1634717832 source:c:\users\benec\onedrive\documents\info c\liste_duble_inlantuite\main.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+

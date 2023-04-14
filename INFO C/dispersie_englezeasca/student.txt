@@ -1,0 +1,5 @@
+Pop, Andrea, 10.00
+Anton, Pan, 2.00
+Alexandru, Voida, 5.00
+Ciobanu, Ionel, 9.00
+Goga, Ocatvian, 8.50

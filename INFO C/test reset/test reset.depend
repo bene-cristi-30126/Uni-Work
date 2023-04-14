@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1645561228 source:c:\users\benec\onedrive\documents\info c\test reset\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

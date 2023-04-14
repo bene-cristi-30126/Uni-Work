@@ -1,0 +1,6 @@
+Bocsa, Georgiana,10.00
+Bodea, Alexandra,5.50
+Bursuc, George,9.20
+Dura, Georgiana,8.70
+Costea, Marcel,7.60
+Scrob, Ionut,8.00

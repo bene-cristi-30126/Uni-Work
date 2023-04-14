@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Grade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="val" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="valuta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GradeResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Date_Time">
+        <s:complexType />
+      </s:element>
+      <s:element name="Date_TimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Date_TimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintElements">
+        <s:complexType />
+      </s:element>
+      <s:element name="PrintElementsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrintElementsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Convertinatoru">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="val" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="valuta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertinatoruResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertinatoruResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GradeSoapIn">
+    <wsdl:part name="parameters" element="tns:Grade" />
+  </wsdl:message>
+  <wsdl:message name="GradeSoapOut">
+    <wsdl:part name="parameters" element="tns:GradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Date_TimeSoapIn">
+    <wsdl:part name="parameters" element="tns:Date_Time" />
+  </wsdl:message>
+  <wsdl:message name="Date_TimeSoapOut">
+    <wsdl:part name="parameters" element="tns:Date_TimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrintElementsSoapIn">
+    <wsdl:part name="parameters" element="tns:PrintElements" />
+  </wsdl:message>
+  <wsdl:message name="PrintElementsSoapOut">
+    <wsdl:part name="parameters" element="tns:PrintElementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertinatoruSoapIn">
+    <wsdl:part name="parameters" element="tns:Convertinatoru" />
+  </wsdl:message>
+  <wsdl:message name="ConvertinatoruSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertinatoruResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="Grade">
+      <wsdl:input message="tns:GradeSoapIn" />
+      <wsdl:output message="tns:GradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Date_Time">
+      <wsdl:input message="tns:Date_TimeSoapIn" />
+      <wsdl:output message="tns:Date_TimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintElements">
+      <wsdl:input message="tns:PrintElementsSoapIn" />
+      <wsdl:output message="tns:PrintElementsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Convertinatoru">
+      <wsdl:input message="tns:ConvertinatoruSoapIn" />
+      <wsdl:output message="tns:ConvertinatoruSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Grade">
+      <soap:operation soapAction="http://tempuri.org/Grade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Date_Time">
+      <soap:operation soapAction="http://tempuri.org/Date_Time" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintElements">
+      <soap:operation soapAction="http://tempuri.org/PrintElements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Convertinatoru">
+      <soap:operation soapAction="http://tempuri.org/Convertinatoru" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Grade">
+      <soap12:operation soapAction="http://tempuri.org/Grade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Date_Time">
+      <soap12:operation soapAction="http://tempuri.org/Date_Time" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintElements">
+      <soap12:operation soapAction="http://tempuri.org/PrintElements" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Convertinatoru">
+      <soap12:operation soapAction="http://tempuri.org/Convertinatoru" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44318/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44318/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

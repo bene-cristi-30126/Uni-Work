@@ -1,0 +1,11 @@
+C:\Users\benec\source\repos\FormsClient\bin\Debug\FormsClient.exe.config
+C:\Users\benec\source\repos\FormsClient\bin\Debug\FormsClient.exe
+C:\Users\benec\source\repos\FormsClient\bin\Debug\FormsClient.pdb
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.csproj.AssemblyReference.cache
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.Form1.resources
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.Properties.Resources.resources
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.csproj.GenerateResource.cache
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.csproj.CoreCompileInputs.cache
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.exe
+C:\Users\benec\source\repos\FormsClient\obj\Debug\FormsClient.pdb

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1633297570 source:c:\users\benec\onedrive\documents\info c\locomotive\main.c
+	<stdio.h>
+	<stdlib.h>
+

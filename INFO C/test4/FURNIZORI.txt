@@ -1,0 +1,4 @@
+1,Bene,0,Cluj,iginer,
+2,Andra,1,Deva,sofer,
+3,Ana,0,Timisoara,violinsta,
+4,Arthur,1,Caras,pianist,

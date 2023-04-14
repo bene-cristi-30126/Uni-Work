@@ -1,0 +1,28 @@
+load ('lab3_order1_6.mat')
+plot(data);
+K_id=4, T_id=0.5;
+H1=tf(K_id,[T_id,1])
+y_id=lsim(H1,data.u,t);
+
+figure, plot(y_id), hold on, plot(data.y)
+
+
+K_val=4, T_val=16.5;
+data_validare=data.u(201:500), t=201:500;
+
+Hval=tf(K_val,[T_val,1]);
+y_val=lsim(H1,data_validare,t);
+plot(201:500,y_val)
+
+E_val=ones(1,length(data_validare));
+MSE_VAL=0;
+    for i=1:length(data_validare)
+        for j=201:length(data.y)
+        E_val(i)=y_val(i)-data.y(j);
+        end
+    end
+
+    for n=1:length(E_val)
+        MSE_VAL=MSE_VAL+E_val(n).^2,
+    end
+    MSE_VAL=MSE_VAL/n,

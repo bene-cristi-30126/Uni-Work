@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635366995 source:c:\users\benec\onedrive\documents\info c\farmacie_inlantuita\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
